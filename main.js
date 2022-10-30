@@ -117,12 +117,17 @@ const filter = (array, houseType) => {
   return houseArray;
 }
 
-const showAllBtn = document.querySelector("#allStudentsBtn");
-const showGryffindorBtn = document.querySelector("#gryffindorBtn");
-const showSlytherinBtn = document.querySelector("#slytherinBtn");
-const showHufflepuffBtn = document.querySelector("#hufflepuffBtn");
-const showRavenclawBtn = document.querySelector("#ravenclawBtn");
 
+const filterRow = () => {
+  const filters = document.querySelector("#filters");
+  filters.addEventListener.apply('click', (e) => {
+    if(e.target.id.includes(filter--)) {
+      const[, id] = e.target.id.split('--');
+      
+      const numId = Number(id);
+
+      const houseType = student.filter(student => student.house === house[numId]);
+      cardsOnDom(houseType);
 
 
 
@@ -136,28 +141,6 @@ showAllBtn.addEventListener('click', () => {
   cardsOnDom(students);
 }); 
 
-showGryffindorBtn.addEventListener('click', () => {
-
-  const houseType = filter(students, 'Gryffindor');
-  cardsOnDom(houseType);
-});
-
-showSlytherinBtn.addEventListener('click', () => {
-
-  const houseType = filter(students, 'Slytherin');
-  cardsOnDom(houseType);
-});
-
-showHufflepuffBtn.addEventListener('click', () => {
-  
-  const houseType = filter(students, 'Hufflepuff');
-  cardsOnDom(houseType);
-});
-
-showRavenclawBtn.addEventListener('click', () => {
-  
-  const houseType = filter(students, 'Ravenclaw');
-  cardsOnDom(houseType);
 });
 
 const startApp = () => {
