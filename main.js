@@ -27,21 +27,6 @@ sortBtn.addEventListener('click', () => {
   </form>`;
 }); 
 
-//const filterButtons = () => {
-  const domString = "";
-  domString = `
-  <button class="btn btn-secondary btn buttonRow" id="allStudentsBtn">All Students</button>
-  <button class="btn btn-secondary btn buttonRow" id="gryffndorBtn">Gryffindor</button>
-  <button class="btn btn-secondary btn buttonRow" id="slytherinBtn">Slytherin</button>
-  <button class="btn btn-secondary btn buttonRow" id="hufflepuffBtn">Hufflepuff</button>
-  <button class="btn btn-secondary btn buttonRow" id="ravenclawBtn">Ravenclaw</button>
-  `;
-  renderToDom('#filterBtn', domString);
-//}
-
-
-
-
 
 
  const cardsOnDom = (array) => {
