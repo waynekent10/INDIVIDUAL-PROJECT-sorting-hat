@@ -66,8 +66,7 @@ form.addEventListener('submit', createStudent);
 const cardsOnVol = (array) => {
   let domString = "";
   for (const removed of array) {
-    domString += `<div class="card" style="width: 18rem;" id="voldemortCard">
-    <img src="..." class="card-img-top" alt="...">
+    domString += `<div class="card" style="width: 18rem;" id="volCard">
     <div class="card-body">
       <h5 class="card-title">${removed.name}</h5>
     </div>
@@ -103,30 +102,29 @@ const filter = (array, houseType) => {
 }
 
 
+
+
+
+
+
 const filterRow = () => {
   const filters = document.querySelector("#filters");
   filters.addEventListener.apply('click', (e) => {
     if(e.target.id.includes(filter--)) {
       const[, id] = e.target.id.split('--');
-      
-      const numId = Number(id);
 
+      const numId = Number(id);
       const houseType = student.filter(student => student.house === house[numId]);
       cardsOnDom(houseType);
-
-
-
-
-
-
-
+    }
+  })
+};
 
 showAllBtn.addEventListener('click', () => {
- 
+
   cardsOnDom(students);
 }); 
 
-});
 
 const startApp = () => {
   cardsOnDom(students);
